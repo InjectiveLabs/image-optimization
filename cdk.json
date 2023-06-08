@@ -1,5 +1,5 @@
 {
-  "app": "npx ts-node --prefer-ts-exts bin/image-optimization.ts",
+  "app": "npx ts-node --prefer-ts-exts bin/validator-image.ts",
   "watch": {
     "include": [
       "**"
@@ -24,6 +24,9 @@
     "@aws-cdk/aws-cloudfront:defaultSecurityPolicyTLSv1.2_2021": true,
     "@aws-cdk-containers/ecs-service-extensions:enableDefaultLogDriver": true,
     "@aws-cdk/aws-ec2:uniqueImdsv2TemplateName": true,
+    "@aws-cdk/aws-lambda-nodejs": {
+      "runtime": "lambda.Runtime.NODEJS_18_X"
+    },
     "@aws-cdk/core:checkSecretUsage": true,
     "@aws-cdk/aws-iam:minimizePolicies": true,
     "@aws-cdk/core:target-partitions": [
